@@ -3,11 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_green_dark">
-    
+
     <ImageView
+        android:id="@+id/splashLogo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/logo1"
         android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Todo App: Welcome!!"
+        android:layout_below="@id/splashLogo"
+        android:layout_centerInParent="true"
+        android:textColor="@color/lightBlue"
+        android:textSize="32sp"
+        android:fontFamily="serif"/>
 </RelativeLayout>
     

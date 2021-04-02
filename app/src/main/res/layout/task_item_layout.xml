@@ -9,7 +9,7 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp">
 
-    <?xml version="1.0" encoding="utf-8"?>
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -17,35 +17,24 @@
         android:padding="10dp"
         >
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbItemCheck"
-        android:paddingStart="8dp"
-        android:focusable="false"
-        android:checked="true"
-        android:layout_alignParentStart="true"
-        android:buttonTint="@android:color/holo_green_dark"/>
-
     <TextView
         android:id="@+id/tvItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="4dip"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:fontFamily="sans-serif"
-        android:layout_alignTop="@+id/cbItemCheck"
-        android:layout_alignBottom="@+id/cbItemCheck"
-        android:text="Wash your Clothes."
-        android:layout_toEndOf="@+id/cbItemCheck"
-        android:textColor="@android:color/black" />
+        android:text="@string/task_description"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:textColorHighlight="@color/lightBlue"/>
 
     <TextView
         android:id="@+id/tvItemPriority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="4dip"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:fontFamily="sans-serif"
         android:text="High"
         android:textColor="@color/colorPrimary"
@@ -56,25 +45,23 @@
     <TextView
         android:id="@+id/tvDueDate"
         android:layout_below="@+id/tvItem"
-        android:layout_toEndOf="@+id/cbItemCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2077/8/9"
-        android:padding="2dip"
-        android:textSize="15sp"
+        android:padding="4dip"
+        android:textSize="18sp"
         android:fontFamily="sans-serif"
         android:textColor="#808080"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:textColorHighlight="@color/lightBlue"/>
 
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_edit_24"
             android:id="@+id/imgDate"
-            android:tint="@color/colorPrimaryDark"
             android:layout_below="@+id/tvItem"
-            android:onClick="editTask"
             android:layout_toStartOf="@+id/deleteTask" />
 
         <ImageView
@@ -83,11 +70,9 @@
             android:src="@drawable/ic_baseline_delete_24"
             android:layout_marginStart="10dp"
             android:id="@+id/deleteTask"
-            android:tint="@color/colorPrimaryDark"
             android:layout_below="@+id/tvItem"
             android:layout_alignParentEnd="true"
-            android:onClick="deleteTask"
-            android:contentDescription="@string/cancel_date" />
+            android:contentDescription="@string/cancel_date" />-->
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

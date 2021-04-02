@@ -2,32 +2,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@drawable/background1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <include
-        layout="@layout/toolbar_layout"
-        android:id="@+id/toolbar"
-        />
 
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tasksRecyclerView"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            tools:listitem=""
-            android:layout_below="@+id/toolbar"
             app:layoutManager='androidx.recyclerview.widget.LinearLayoutManager'
             android:nestedScrollingEnabled="true"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id='@+id/fabBtn'
         android:layout_width="wrap_content"
+        app:borderWidth="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="32dp"
-        android:backgroundTint="@android:color/holo_green_dark"
+        android:backgroundTint="@color/lightBlue"
         android:src="@drawable/ic_baseline_add"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/add_update_fragment"
+        android:background="@color/white"
+        android:id="@+id/fragment_container"
+        />
     </RelativeLayout>
